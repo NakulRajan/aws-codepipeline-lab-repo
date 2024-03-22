@@ -9,4 +9,6 @@ const server = http.createServer((req, res) => {
 })
 
 console.log(`Server listening on port ${PORT}`);
-server.listen(process.env.PORT || PORT)
+server.listen(process.env.PORT || PORT, '0.0.0.0', () => {
+  console.log(`Server listening on port ${process.env.PORT || PORT}`);
+});
